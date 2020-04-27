@@ -20,6 +20,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Graph CSS -->
     <link href="{{asset('/')}}admin/css/lines.css" rel='stylesheet' type='text/css' />
     <link href="{{asset('/')}}admin/css/font-awesome.css" rel="stylesheet">
+
+
+    {{--Following two link is for sweetalert--}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" rel="stylesheet">
+
+
     <!-- jQuery -->
     <script src="{{asset('/')}}admin/js/jquery.min.js"></script>
     <!----webfonts--->
@@ -33,6 +40,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Graph JavaScript -->
     <script src="{{asset('/')}}admin/js/d3.v3.js"></script>
     <script src="{{asset('/')}}admin/js/rickshaw.js"></script>
+
+{{--    follwings are for ckeditor--}}
+    <script src="{{asset('/')}}admin/ckeditor/ckeditor.js"></script>
+    <script src="{{asset('/')}}admin/ckeditor/samples/js/sample.js"></script>
+    <link rel="stylesheet" href="{{asset('/')}}admin/ckeditor/samples/css/samples.css">
+    <link rel="stylesheet" href="{{asset('/')}}admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+
 </head>
 <body>
 <div id="wrapper">
@@ -58,13 +72,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- /.navbar-static-side -->
     </nav>
     <div id="page-wrapper">
-        @yield('body')
+                                     @yield('body')
     </div>
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('/')}}admin/js/bootstrap.min.js"></script>
+
+{{--Following three links is for sweet alert--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@include('sweetalert::alert')
+<script>
+    $('.deleteConfirm').on('click', function (e) {
+        event.preventDefault();
+        const url = $(this).attr('href');
+        swal({
+            title: 'Are you sure?',
+            text: 'This record  will be permanently deleted!',
+            icon: 'warning',
+            buttons: ["Cancel", "Yes!"],
+        }).then(function(value) {
+            if (value) {
+                window.location.href = url;
+            }
+        });
+    });
+
+
+    // $(".deleteConfirmm").click(function () {
+    //     var id = $(this).attributes('rel');
+    //     var deleteFunction = $(this).attributes('rel1');
+    //     swal({
+    //         title: 'Are You sure?',
+    //         text: "You won't be able to revert this!",
+    //         type: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, delete it!',
+    //         cancelButtonText: 'No, cancel!',
+    //         confirmButtonClass: 'btn btn-success',
+    //         cancelButtonClass: 'btn btn-danger',
+    //         buttonsStyling: false,
+    //         reverseButtons: true
+    //     },
+    //         function () {
+    //             window.location.href=deleteFunction+"/"+id;
+    //         });
+    //
+    // })
+
+
+
+
+
+
+</script>
+<script>
+    initSample();
+</script>
 </body>
 </html>
 
