@@ -11,7 +11,7 @@ Mobile Edit
                 <h4 class="text-center text-success">Edit Mobile Info</h4>
             </div>
             <div class="panel-body">
-                <form action="{{route('update-mobile')}}" method="POST" class="form-horizontal" enctype="multipart/form-data" name="productEditForm">
+                <form action="{{route('update-mobilePhone')}}" method="POST" class="form-horizontal" enctype="multipart/form-data" name="productEditForm">
                     @csrf
                     <div class="form-group">
                         <label class="control-label col-md-4">Brand Name</label>
@@ -285,7 +285,7 @@ Mobile Edit
 
                     <div class="form-group">
                         <label class="control-label col-md-4">Mobile Image</label>
-                        <input type="file" name="file[]" multiple>
+                        <input type="file" name="file[]">
                         <img src="{{ asset($mobile->file) }}" alt="image" width="75px" height="75px" align="center">
                     </div>
 

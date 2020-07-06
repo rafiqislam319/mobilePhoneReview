@@ -91,7 +91,7 @@ class MobileController extends Controller
 
 
             }
-                    return redirect('mobile/add')->with('success', 'Mobile Info Save Successfully');
+                    return redirect('mobilePhone/add')->with('success', 'Mobile Info Save Successfully');
 
         }
     }
@@ -207,7 +207,7 @@ class MobileController extends Controller
     }
     public function deleteMobileInfo($id){
          Mobile::find($id)->delete();
-        //$mobile->delete();
+        //$mobilePhone->delete();
         return redirect('manage/MobileInfo')->with('success', 'Mobile Info Deleted Successfully');
     }
 

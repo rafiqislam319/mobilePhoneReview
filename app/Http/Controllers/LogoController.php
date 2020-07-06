@@ -43,6 +43,7 @@ class LogoController extends Controller
     }
     public function logoManage(){
         $logoInfo = logo::all();
+        //return $logoInfo;
         return view('admin.logo.manageLogo', ['logoInfo'=>$logoInfo]);
     }
     public function logoUnPublished($id){

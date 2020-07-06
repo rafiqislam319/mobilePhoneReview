@@ -42,8 +42,8 @@
             <a href="#"><i class="fa fa-laptop nav_icon"></i>Mobile<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
                 <li>
-                    <a href="{{route('add-mobile')}}">Add Mobile</a>
-                    <a href="{{route('manage-mobile')}}">Manage Mobile</a>
+                    <a href="{{route('add-mobilePhone')}}">Add Mobile</a>
+                    <a href="{{route('manage-mobilePhone')}}">Manage Mobile</a>
                 </li>
             </ul>
             <!-- /.nav-second-level -->

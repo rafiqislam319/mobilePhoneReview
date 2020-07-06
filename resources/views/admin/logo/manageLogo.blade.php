@@ -12,7 +12,7 @@
                         <tr class="bg-danger">
                             <th>SI NO.</th>
                             <th>Logo Name</th>
-                            <th>File Name</th>
+                            <th>Logo Image</th>
                             <th>Publication status</th>
                             <th>Action</th>
                         </tr>
@@ -21,7 +21,10 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $logoInfo->logo_name }}</td>
-                                <td>{{ $logoInfo->file_name }}</td>
+{{--                                <td>{{ $logoInfo->file_name }}</td>--}}
+                                <td>
+                                    <img src="{{asset('uploads/images/'.$logoInfo->file_name)}}" width="150px" height="150px" alt="image is here"/>
+                                </td>
                                 <td>{{ $logoInfo->publication_status == 1 ? 'published' : 'unpublished' }}</td>
                                 <td>
                                     @if($logoInfo->publication_status == 1)

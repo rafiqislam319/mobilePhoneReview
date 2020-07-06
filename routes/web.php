@@ -11,7 +11,14 @@ Route::get('contactUs', [
     'uses'  =>  'mobilePhoneReviewController@contactUs',
     'as'    => 'contactUs'
 ]);
-
+Route::get('details/{id}', [
+    'uses'  =>  'mobilePhoneReviewController@mobileAllDetails',
+    'as'    =>  'mobilePhone-detail'
+]);
+Route::get('mobile/by/brand',[
+    'uses' =>   'mobilePhoneReviewController@brandsMobile',
+    'as'   =>   'brands-mobile'
+]);
 
 /*For Admin user section starts here*/
 Route::get('adminProfile', [
@@ -125,41 +132,41 @@ Route::get('logo/delete/{id}', [
 ]);
 
 /*product/Mobile info goes here*/
-Route::get('mobile/add', [
+Route::get('mobilePhone/add', [
    'uses'    => 'MobileController@index',
-   'as'      => 'add-mobile'
+   'as'      => 'add-mobilePhone'
 ]);
 Route::post('save/MobileInfo', [
     'uses'   => 'MobileController@saveMobileInfo',
-    'as'     => 'save-mobile'
+    'as'     => 'save-mobilePhone'
 ]);
 Route::get('manage/MobileInfo', [
     'uses'   => 'MobileController@manageMobileInfo',
-    'as'     => 'manage-mobile'
+    'as'     => 'manage-mobilePhone'
 ]);
-Route::get('mobile/details/{id}',[
+Route::get('mobilePhone/details/{id}',[
     'uses'  => 'MobileController@mobileDetails',
-    'as'    => 'mobile-details'
+    'as'    => 'mobilePhone-details'
 ]);
 Route::get('edit/MobileInfo/{id}', [
     'uses'   => 'MobileController@editMobileInfo',
-    'as'     => 'edit-mobile'
+    'as'     => 'edit-mobilePhone'
 ]);
 Route::post('update/MobileInfo', [
     'uses'   => 'MobileController@updateMobileInfo',
-    'as'     => 'update-mobile'
+    'as'     => 'update-mobilePhone'
 ]);
 Route::get('unpublished/MobileInfo/{id}', [
     'uses'   => 'MobileController@unPublishedMobileInfo',
-    'as'     => 'unpublished-mobile'
+    'as'     => 'unpublished-mobilePhone'
 ]);
 Route::get('published/MobileInfo/{id}', [
     'uses'   => 'MobileController@publishedMobileInfo',
-    'as'     => 'published-mobile'
+    'as'     => 'published-mobilePhone'
 ]);
 Route::get('delete/MobileInfo/{id}', [
     'uses'   => 'MobileController@deleteMobileInfo',
-    'as'     => 'delete-mobile'
+    'as'     => 'delete-mobilePhone'
 ]);
 
 

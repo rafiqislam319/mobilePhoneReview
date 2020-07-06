@@ -34,8 +34,9 @@
                                         <ul class="multi-column-dropdown">
                                             @foreach($brands as $brand)
                                             <li>
-                                                <a href="product.html">{{ $brand->brand_name }}</a>
+                                                <a href="{{ route('brands-mobile',['id'=>$brand->id])}}">{{ $brand->brand_name }}</a>
                                             </li>
+                                            {{-- @endforeach --}}
 
                                         </ul>
                                     </div>

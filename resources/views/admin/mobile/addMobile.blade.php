@@ -11,7 +11,7 @@
                     <h4 class="text-center text-success">Add Mobile Info</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="{{route('save-mobile')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                    <form action="{{route('save-mobilePhone')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label class="control-label col-md-4">Brand Name</label>
@@ -284,7 +284,7 @@
 
                         <div class="form-group">
                             <label class="control-label col-md-4">Mobile Image</label>
-                            <input type="file" name="file[]" multiple>
+                            <input type="file" name="file[]">
                         </div>
 
                         <div class="form-group">

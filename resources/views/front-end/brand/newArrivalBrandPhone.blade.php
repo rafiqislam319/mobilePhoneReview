@@ -1,4 +1,4 @@
-@extends('front-end.master')
+{{-- @extends('front-end.master')
 
 @section('title')
     New Arrival Phone
@@ -109,3 +109,4 @@
 
 @endsection
 
+ --}}

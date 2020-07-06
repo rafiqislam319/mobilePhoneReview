@@ -34,15 +34,15 @@
 
 
                                     <td class="btn btn-group-horizontal">
-                                        <a href="{{ route('mobile-details', ['id'=>$mobile->id]) }}" class="btn btn-primary btn-xs" title="view details">
+                                        <a href="{{ route('mobilePhone-details', ['id'=>$mobile->id]) }}" class="btn btn-primary btn-xs" title="view details">
                                             <span class="glyphicon glyphicon-zoom-in"></span>
                                         </a>
                                         @if($mobile->publication_status==1)
-                                        <a href="{{ route('unpublished-mobile', ['id'=>$mobile->id]) }}" class="btn btn-info btn-xs" title="published">
+                                        <a href="{{ route('unpublished-mobilePhone', ['id'=>$mobile->id]) }}" class="btn btn-info btn-xs" title="published">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                         </a>
                                         @else
-                                           <a href="{{ route('published-mobile', ['id'=>$mobile->id]) }}" class="btn btn-danger btn-xs" title="Unpublished">
+                                           <a href="{{ route('published-mobilePhone', ['id'=>$mobile->id]) }}" class="btn btn-danger btn-xs" title="Unpublished">
                                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                             </a>
                                         @endif
@@ -51,10 +51,10 @@
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </a>
 
-                                        <a href="{{ route('edit-mobile', ['id'=>$mobile->id]) }}" class="btn btn-primary btn-xs" title="edit">
+                                        <a href="{{ route('edit-mobilePhone', ['id'=>$mobile->id]) }}" class="btn btn-primary btn-xs" title="edit">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="{{ route('delete-mobile', ['id'=>$mobile->id]) }}" class="btn btn-danger btn-xs deleteConfirm" title="delete">
+                                        <a href="{{ route('delete-mobilePhone', ['id'=>$mobile->id]) }}" class="btn btn-danger btn-xs deleteConfirm" title="delete">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>
